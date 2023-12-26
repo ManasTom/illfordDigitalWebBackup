@@ -6609,16 +6609,18 @@ h3 i {
   left: 0;
   z-index: -1;
 }
+
 @media only screen and (max-width: 768px) {
   .background-image {
-    
-      display: none; 
-    }
-  
-    body {
-      background-color: white;
-    }
+
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
 }
+
 .button-lead {
   margin-right: 20px;
 }
@@ -6668,7 +6670,6 @@ h3 i {
   width: 500px;
   height: 250px;
   background-color: #f2f2f2;
-  /* border-radius: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6677,9 +6678,6 @@ h3 i {
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: 70px;
-  /* padding: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px; */
   border-radius: 12px;
   border: 1px black solid;
 }
@@ -6687,7 +6685,6 @@ h3 i {
 .digitalcard:hover {
   background: #0a0a0a;
   transform: scale(1.05);
-  /* Adding a slight scale effect on hover */
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
@@ -6701,7 +6698,6 @@ h3 i {
   width: 100%;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 100%;
-  /* Add this line to make sure the image fills the container */
   object-fit: cover;
 }
 
@@ -6716,8 +6712,12 @@ h3 i {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align center vertically */
+  justify-content: center; /* Align center horizontally */
   padding: 20px;
-  background-color: #c2bebee9;
+  background-color: #ef6c00;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -6730,7 +6730,7 @@ h3 i {
 .digitalcard__title {
   margin: 0;
   font-size: 24px;
-  color: #0e0d0d;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -6741,9 +6741,11 @@ h3 i {
 .digitalcard__description {
   margin: 10px 0 0;
   font-size: 14px;
-  color: #141414;
+  color: #fff;
   line-height: 1.4;
+  text-align: center; /* Center-align the description */
 }
+
 
 @media (max-width: 767px) {
   .digitalcard {
@@ -6754,12 +6756,12 @@ h3 i {
 }
 
 /* card for internhip  */
+
 .interncard {
   position: relative;
   width: 350px;
   height: 400px;
   background-color: #f2f2f2;
-  /* border-radius: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6768,25 +6770,22 @@ h3 i {
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: 70px;
-  /* padding: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px; */
   border-radius: 12px;
   border: 1px black solid;
 }
-
 
 .interncard img {
   width: 100%;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 100%;
-  /* Add this line to make sure the image fills the container */
   object-fit: cover;
 }
 
 .interncard:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+  /* Set the background color to white on hover */
 }
 
 .interncard:hover .digitalcard__content {
@@ -7000,23 +6999,23 @@ h3 i {
   .ads_panel {
     text-align: left;
   }
-  
-.ads_contact_container_left h3 {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #000;
-  font-size: 100%;
-  width: 50%;
-  margin-top: 0;
-}
 
-.ads_contact_container_left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
+  .ads_contact_container_left h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #000;
+    font-size: 100%;
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .ads_contact_container_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
 
 }
 
@@ -7054,10 +7053,11 @@ h3 i {
 .ads_contact_container {
   background-color: #ffff;
   color: #000;
-  text-align: left;
+  text-align: center;
   padding-top: 3%;
   padding-bottom: 3%;
   padding-left: 3%;
+  padding-right: 3%;
   border-radius: 2rem;
   width: 80%;
 }
@@ -7092,11 +7092,11 @@ h3 i {
 }
 
 #firstname {
-  width: 30%;
+  width: 35%;
 }
 
 #lastname {
-  width: 30%;
+  width: 35%;
   margin-left: 10%;
 }
 
@@ -7122,7 +7122,7 @@ h3 i {
   padding: 10px 20px;
   font-size: 16px;
   text-align: center;
-  background-color: #000;
+  background-color: #25D366;
   color: #fff;
   border-radius: 30px;
   margin: 10px;
@@ -7162,24 +7162,83 @@ h3 i {
 
 /* ADS*/
 
+/* portfolio*/
 
-/*portfolio*/
-
-.portfolio_sec2{
-  width: 70%;
+.portfolio_page_counter_container {
+  width: auto;
   height: auto;
-  background-color: #ef6c00;
-  color: #ffff;
-  align-items: center;
-  justify-content: center;
   display: flex;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  border-radius: 5rem;
-  
+  justify-content: center;
+  align-items: center;
+  background-color: #37474f;;
+  padding-bottom: 6%;
 }
 
-.portfolio_sec2_items{
-  margin-left: 5rem;
-  margin-right: 5rem;
+.portfolio_page_counter_container_inner {
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+  background-color: #ef6c00;
+  margin-top: 7rem;
+  border-radius: 7rem;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
+
+.portfolio_page_counter_container_inner h4{
+  color: #fff;
+  font-weight: bold;
+  font-size: 30%;
+}
+
+
+
+
+
+.portfolio_page_case_studies {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #37474f;;
+  padding-bottom: 6%;
+}
+
+.portfolio_page_case_studies_inner {
+  width: 80%;
+  text-align: left;
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+  background-color: #37474f;;
+  margin-top: 7rem;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.portfolio_page_case_studies_inner h3{
+  color: #fff;
+  font-weight: bold;
+  font-size: 30%;
+  text-align: left;
+}
+.portfolio_page_case_studies_inner h5{
+  color: #fff;
+  font-size: 20%;
+  text-align: left;
+}
+.portfolio_page_case_studies_inner button{
+  color: #000;
+  font-size: 30%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 8%;
+  padding-right: 8%;
+  border-radius: 47rem;
+  border: 0;
+}
+
+/* portfolio*/
