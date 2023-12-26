@@ -7161,3 +7161,25 @@ h3 i {
 
 
 /* ADS*/
+
+
+/*portfolio*/
+
+.portfolio_sec2{
+  width: 70%;
+  height: auto;
+  background-color: #ef6c00;
+  color: #ffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 5rem;
+  
+}
+
+.portfolio_sec2_items{
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
