@@ -4966,7 +4966,7 @@ transition: transform 0.3s;
 
 .services_page_section7_tag_container {
   padding-bottom: 15%;
-  padding-top: 1%;
+  padding-top:1%;
 }
 
 .services_page_section7_tags {
@@ -6619,6 +6619,10 @@ h3 i {
   body {
     background-color: white;
   }
+
+  .brand-img-white {
+    margin: 0;
+  }
 }
 
 .button-lead {
@@ -6714,8 +6718,10 @@ h3 i {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Align center vertically */
-  justify-content: center; /* Align center horizontally */
+  align-items: center;
+  /* Align center vertically */
+  justify-content: center;
+  /* Align center horizontally */
   padding: 20px;
   background-color: #ef6c00;
   transform: rotateX(-90deg);
@@ -6743,7 +6749,8 @@ h3 i {
   font-size: 14px;
   color: #fff;
   line-height: 1.4;
-  text-align: center; /* Center-align the description */
+  text-align: center;
+  /* Center-align the description */
 }
 
 
@@ -6832,6 +6839,8 @@ h3 i {
   /* Maintain aspect ratio */
   max-height: 150px;
   /* Set a maximum height for the images */
+  scale: 145%;
+  margin-top: 20px;
 }
 
 .benefits-section .benefit-item {
@@ -6842,11 +6851,12 @@ h3 i {
 .benefits-section h3 {
   color: black;
   font-size: 1.5em;
-  margin-top: 10px;
+  margin-top: 20px;
   /* Add some space above the heading */
   position: relative;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+  padding-top: 25px;
   /* Required for positioning the pseudo-element */
 }
 
@@ -6975,6 +6985,7 @@ h3 i {
 }
 
 
+
 @media (max-width: 767px) {
 
   .ads_faq_description_container {
@@ -7001,11 +7012,12 @@ h3 i {
   }
 
   .ads_contact_container_left h3 {
+    font-size: xx-large;
     font-family: "IBM Plex Sans", sans-serif;
     color: #000;
-    font-size: 100%;
-    width: 50%;
-    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+
   }
 
   .ads_contact_container_left {
@@ -7159,6 +7171,55 @@ h3 i {
   padding-bottom: 2%;
 }
 
+.buttonjoinnow {
+  
+  background: rgb(239, 108, 0);
+  border: 2px solid rgb(239, 108, 0);
+  padding: 15px 42px;
+  height: 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  
+  border: none;
+  
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: black;
+ 
+  transition: all 1000ms;
+ 
+  position: relative;
+  overflow: hidden;
+  outline: 1px solid black;
+}
+
+.buttonjoinnow:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 1px solid black;
+  box-shadow: 4px 5px 17px -4px black;
+}
+
+.buttonjoinnow::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color:  #ef6c00;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.buttonjoinnow:hover::before {
+  width: 200%;
+}
+
+
 
 /* ADS*/
 
@@ -7241,4 +7302,4 @@ h3 i {
   border: 0;
 }
 
-/* portfolio*/
+/* portfolio*/
