@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Use mail() function to send the email
     if (mail($to, $subject, $email_body, $headers)) {
-        echo "Thank you for your message!";
+        header('Location: thankyou.html');
     } else {
-        echo "Oops! Something went wrong.";
+        header('Location: oops.html');
     }
 }
 ?>
