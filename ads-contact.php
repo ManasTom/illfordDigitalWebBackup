@@ -1,33 +1,31 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $to = "contact@illforddigital.com, illforddigital@gmail.com"; 
+    $to = "contact@illforddigital.com, illforddigital@gmail.com"; // Your email address
     $subject = "New form submission";
     $headers = "From: $email";
 
-    $email_body = "You have received a new message from $name.\n".
+    $email_body = "You have received a new message from $firstname $lastname.\n".
                   "Email address: $email\n".
                   "Mobile Number: $phone\n".
-                  "Message:\n $message";
+                  "Message: $message\n";
 
-    // mail() function to send the email
+    // Use mail() function to send the email
     if (mail($to, $subject, $email_body, $headers)) {
         // Send thank-you email to the responder
         $responder_subject = "Thank you for contacting us!";
-        $responder_message = "Dear $name,\n\nThank you for contacting us. We have received your message and will get back to you shortly.\n\nBest regards,\nThe Illford Digital Team";
+        $responder_message = "Dear $firstname,\n\nThank you for contacting us. We have received your message and will get back to you shortly.\n\nBest regards,\nThe Illford Digital Team";
 
         $responder_headers = "From: illforddigital@gmail.com"; // Change this to your sender email
 
         mail($email, $responder_subject, $responder_message, $responder_headers);
-
-        // Redirect to the thank-you page
         header('Location: thankyou.html');
     } else {
-        // Redirect to the error page if there's an issue with sending the email
         header('Location: oops.html');
     }
 }
