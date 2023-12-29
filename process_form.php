@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $to = "contact@illforddigital.com, illforddigital@gmail.com"; 
+    $to = "@illforddigital.com, illforddigital@gmail.com"; 
     $subject = "New form submission";
     $headers = "From: $email";
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mail($email, $responder_subject, $responder_message, $responder_headers);
 
         // Redirect to the thank-you page
-        header('Location: thankyou.html');
+        header('Location: alert.html');
     } else {
         // Redirect to the error page if there's an issue with sending the email
         header('Location: oops.html');
