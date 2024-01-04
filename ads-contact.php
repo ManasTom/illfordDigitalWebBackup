@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     $to = "contact@illforddigital.com, illforddigital@gmail.com"; // Your email address
-    $subject = "COURSE ENQUIRY FOR DIGITAL MARKETING";
+    $subject = " Enquiry for Digital Marketing Course";
     $headers = "From: $email";
 
     $email_body = "You have received a new message from $firstname $lastname.\n".

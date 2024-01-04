@@ -5,11 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $to = "@illforddigital.com, illforddigital@gmail.com"; 
-    $subject = "New form submission";
+    $to = "contact@illforddigital.com, illforddigital@gmail.com"; 
+    $subject = "Enquiry for Digital Marketing Services - contact page ";
     $headers = "From: $email";
 
-    $email_body = "You have received a new message from $name.\n".
+    $email_body = "You have received a new message from \n".
+                   "Full Name : $name \n".
                   "Email address: $email\n".
                   "Mobile Number: $phone\n".
                   "Message:\n $message";
